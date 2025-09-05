@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap");
 
 $primary-color: #007bff;
 $secondary-color: #6c757d;
@@ -78,7 +79,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 8rem 1rem;
 }
@@ -88,6 +89,7 @@ ul {
 }
 
 a {
+  font-family: "TASA Explorer", sans-serif;
   text-decoration: none;
   color: inherit;
 
