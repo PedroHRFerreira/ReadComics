@@ -86,7 +86,9 @@ const Top = () => {
           modules={[Navigation]}
           slidesPerView="auto"
           breakpoints={{
-            320: { slidesPerView: 1.2, spaceBetween: 16 },
+            320: { slidesPerView: 1.2, spaceBetween: 20 },
+            375: { slidesPerView: 1.2, spaceBetween: 24 },
+            450: { slidesPerView: 1.3, spaceBetween: 16 },
             640: { slidesPerView: 2.5, spaceBetween: 20 },
             768: { slidesPerView: 3, spaceBetween: 24 },
             1024: { slidesPerView: 4, spaceBetween: 24 },

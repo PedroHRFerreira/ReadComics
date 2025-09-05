@@ -4,6 +4,13 @@
   gap: 64px;
   padding: 2rem 0;
 
+  @media (max-width: 450px) {
+    gap: 32px;
+  }
+  @media (max-width: 375px) {
+    gap: 40px;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -16,6 +23,10 @@
       font-weight: 700;
       margin: 0;
       color: #ffffff;
+
+      @media (max-width: 425) {
+        font-size: 42px;
+      }
     }
 
     &__navigation {
