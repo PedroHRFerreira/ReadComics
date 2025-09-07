@@ -2,21 +2,12 @@
 import { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import style from "./style.module.scss";
-
-interface UserData {
-  name: string;
-  email: string;
-  birthDate: string;
-  profileImage?: string;
-  bio?: string;
-  location?: string;
-}
-
+import { IUser } from "./IUser.types";
 const User = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [user, setUser] = useState<UserData | null>(null);
+  const [user, setUser] = useState<IUser | null>(null);
 
-  const [formData, setFormData] = useState<UserData>({
+  const [formData, setFormData] = useState<IUser>({
     name: "",
     email: "",
     birthDate: "",
