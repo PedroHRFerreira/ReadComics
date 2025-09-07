@@ -6,7 +6,7 @@ const Header = () => {
       <section className={style.header__content}>
         <h1>ReadComics</h1>
         <div className={style.header__content__links}>
-          <a href="/home">Home</a>
+          <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/contact">contact</a>
         </div>
