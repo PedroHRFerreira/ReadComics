@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "@/assets/globals.scss";
+import "@/assets/comics.scss";
 import Header from "@/components/Header/Index";
 import ShadersSlider from "@/components/ShadersSlider/Index";
 
@@ -20,7 +20,7 @@ interface ComicsLayoutProps {
 export default function ComicsLayout({ children }: ComicsLayoutProps) {
   return (
     <div className={`${geistSans.variable} ${geistMono.variable}`}>
-      <header>
+      <header style={{ position: "relative" }}>
         <Header />
         <ShadersSlider />
       </header>
