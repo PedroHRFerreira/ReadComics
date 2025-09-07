@@ -1,6 +1,7 @@
 import { useState } from "react";
 import style from "./style.module.scss";
 import Discover from "../Discover/Index";
+import Comments from "../Comments/Index";
 import Pages from "../Pages/Index";
 
 const Navigation = () => {
@@ -12,7 +13,7 @@ const Navigation = () => {
     },
     {
       name: "comments",
-      component: Discover,
+      component: Comments,
     },
     {
       name: "users",
