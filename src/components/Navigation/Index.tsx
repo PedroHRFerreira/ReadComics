@@ -1,8 +1,8 @@
 import { useState } from "react";
 import style from "./style.module.scss";
-import Discover from "../Discover/Index";
 import Comments from "../Comments/Index";
 import Pages from "../Pages/Index";
+import User from "../User/Index";
 
 const Navigation = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -16,8 +16,8 @@ const Navigation = () => {
       component: Comments,
     },
     {
-      name: "users",
-      component: Discover,
+      name: "user",
+      component: User,
     },
   ];
   const ActiveComponent = pages[activeIndex].component;
