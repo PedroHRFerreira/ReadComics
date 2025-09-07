@@ -1,9 +1,9 @@
-import RootLayout from "@/layouts/RootLayout";
+import ComicsLayout from "@/layouts/ComicsLayout";
 
 export default function Comics() {
   return (
-    <RootLayout>
+    <ComicsLayout>
       <article>teste de rota</article>
-    </RootLayout>
+    </ComicsLayout>
   );
 }
