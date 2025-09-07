@@ -1,13 +1,14 @@
 import { useState } from "react";
 import style from "./style.module.scss";
 import Discover from "../Discover/Index";
+import Pages from "../Pages/Index";
 
 const Navigation = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const pages = [
     {
       name: "pages",
-      component: Discover,
+      component: Pages,
     },
     {
       name: "comments",
