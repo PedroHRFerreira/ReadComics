@@ -2,7 +2,7 @@ import style from "./style.module.scss";
 import Icon from "../Icon/Index";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
@@ -11,6 +11,8 @@ import "swiper/css/navigation";
 
 const Top = () => {
   const swiperRef = useRef<SwiperType | null>(null);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
 
   const topComics = [
     {
@@ -64,13 +66,17 @@ const Top = () => {
 
         <div className={style.home__header__navigation}>
           <button
-            className={`${style.navButton} ${style.navButton__prev}`}
+            className={`${style.navButton} ${
+              isBeginning ? style.disabled : ""
+            }`}
+            disabled={isBeginning}
             onClick={() => swiperRef.current?.slidePrev()}
           >
             <Icon name="left" />
           </button>
           <button
-            className={`${style.navButton} ${style.navButton__next}`}
+            className={`${style.navButton} ${isEnd ? style.disabled : ""}`}
+            disabled={isEnd}
             onClick={() => swiperRef.current?.slideNext()}
           >
             <Icon name="right" />
@@ -82,6 +88,12 @@ const Top = () => {
         <Swiper
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
+            setIsBeginning(swiper.isBeginning);
+            setIsEnd(swiper.isEnd);
+          }}
+          onSlideChange={(swiper) => {
+            setIsBeginning(swiper.isBeginning);
+            setIsEnd(swiper.isEnd);
           }}
           modules={[Navigation]}
           slidesPerView="auto"
