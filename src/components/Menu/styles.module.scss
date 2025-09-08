@@ -1,0 +1,56 @@
+.content {
+  display: grid;
+  gap: 12px;
+
+  .icon {
+    cursor: pointer;
+  }
+
+  .modal {
+    position: absolute;
+    top: 65px;
+    right: 40px;
+    width: 200px;
+    background: #121212;
+    color: #e0e0e0;
+    border-radius: 8px;
+    padding: 2rem;
+
+    display: grid;
+    gap: 12px;
+
+    .link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      cursor: pointer;
+      border-bottom: #d32f2f 1px solid;
+    }
+    .active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      cursor: pointer;
+      border: #d32f2f 1px solid;
+      transition: all 0.2s ease-in-out;
+      border-radius: 2px;
+
+      &:before {
+        display: none;
+      }
+
+      &:hover {
+        opacity: 1;
+        background: #b71c1c;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(211, 47, 47, 0.4);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+}

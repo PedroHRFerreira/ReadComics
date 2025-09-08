@@ -28,6 +28,18 @@
     &__links {
       display: flex;
       gap: 1rem;
+
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+
+    &__modal {
+      display: none;
+
+      @media (max-width: 600px) {
+        display: block;
+      }
     }
   }
 }
