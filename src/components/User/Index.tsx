@@ -3,6 +3,7 @@ import { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import style from "./style.module.scss";
 import { IUser } from "./IUser.types";
+import Image from "next/image";
 const User = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState<IUser | null>(null);
@@ -126,7 +127,7 @@ const User = () => {
           <h1 className={style.users__title}>Perfil do Usuário</h1>
           <div className={style.users__profile}>
             {user?.profileImage ? (
-              <img src={user.profileImage} alt={user.name} />
+              <Image src={user.profileImage} alt={user.name} />
             ) : (
               <div className={style.users__avatar}>{user?.name[0]}</div>
             )}

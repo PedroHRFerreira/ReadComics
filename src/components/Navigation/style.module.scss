@@ -8,6 +8,14 @@
     justify-content: center;
     gap: 32px;
     align-items: center;
+    background: #1e1e1e;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+
+    margin: 0 auto;
+    max-width: 430px;
+    width: 100%;
+    padding: 12px;
 
     &__active {
       width: 102px;
@@ -37,6 +45,11 @@
       &:active {
         transform: translateY(0);
       }
+    }
+
+    h1 {
+      width: 90px;
+      text-align: center;
     }
   }
 }

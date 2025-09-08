@@ -24,7 +24,11 @@ body {
   font-optical-sizing: auto;
   line-height: 1.5;
   color: #fff;
-  background-color: #010409;
+
+  background-image: url("/images/bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @mixin responsive($breakpoint) {
